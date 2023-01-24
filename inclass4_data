@@ -31,7 +31,11 @@ import matplotlib.pyplot as plt
 # PART 3
 # Using the Erie Dataset, plot the Water Level, the second column, 
 # as a function of time years
-
+eri = pd.read_csv("eri.csv", delimiter = ",", skiprows = 0, encoding = "utf-8")
+plt.plot(eri["time"], eri["water level"], color = "blue")
+plt.xlabel("Time")
+plt.ylabel("Water Level")
+plt.title("Erie Lake - Time vs Water Level")
 
 
 # PART 4
