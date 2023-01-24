@@ -51,6 +51,14 @@ import matplotlib.pyplot as plt
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
+mhu = pd.read_csv("mhu.csv",delimiter=",",skiprows=0, encoding='utf-8')
+eri = pd.read_csv("eri.csv",delimiter=",",skiprows=0, encoding='utf-8')
+
+plt.scatter(mhu["lake average"], eri["water level"], color = 'm')
+plt.title("Michigan/Huron Water Level vs Erie Water Level")
+plt.xlabel("Michigan/Huron Water Leve")
+plt.ylabel("Erie Water Level")
+
 
 
 
