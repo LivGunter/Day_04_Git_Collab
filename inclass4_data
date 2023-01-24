@@ -35,6 +35,11 @@ import matplotlib.pyplot as plt
 
 
 # PART 4
+import pandas as pd 
+import matplotlib.pyplot as plt
+Ontario = pd.read_csv("ontario.csv", delimiter=",", skiprows=0, encoding="utf-8")
+Ontario
+plt.plot(Ontario["year"], Ontario["Lake Ontario annual averages"], "blue", label = "name")
 # Using the Ontario Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
